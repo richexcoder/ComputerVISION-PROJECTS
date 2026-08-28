@@ -11,3 +11,13 @@ labels_path = tf.keras.utils.get_file(
     "https://storage.googleapis.com/download.tensorflow.org/data/imagenet_class_index.json"
 )
 
+import json
+
+with open(labels_path) as f:
+    class_index = json.load(f)
+
+# Open webcam
+cap = cv2.VideoCapture(0)
+
+print("Starting image classifier...")
+print("Press Q to quit")
