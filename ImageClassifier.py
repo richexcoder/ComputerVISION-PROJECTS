@@ -29,3 +29,6 @@ while True:
     if not ret:
         print("Could not access camera")
         break
+    # Resize image for MobileNetV2
+    image = cv2.resize(frame, (224, 224))
+
