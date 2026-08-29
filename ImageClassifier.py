@@ -2,10 +2,10 @@ import cv2
 import numpy as np
 import tensorflow as tf
 
-# Load the pre-trained MobileNetV2 model
+# Loading the pre-trained MobileNetV2 model
 model = tf.keras.applications.MobileNetV2(weights="imagenet")
 
-# Load ImageNet class names
+# Loading the ImageNet class names
 labels_path = tf.keras.utils.get_file(
     "imagenet_class_index.json",
     "https://storage.googleapis.com/download.tensorflow.org/data/imagenet_class_index.json"
@@ -21,3 +21,11 @@ cap = cv2.VideoCapture(0)
 
 print("Starting image classifier...")
 print("Press Q to quit")
+
+while True:
+    # Reading the frame from my webcam
+    ret, frame = cap.read()
+
+    if not ret:
+        print("Could not access camera")
+        break
