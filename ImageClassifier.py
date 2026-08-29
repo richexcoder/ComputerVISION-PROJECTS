@@ -31,4 +31,10 @@ while True:
         break
     # Resize image for MobileNetV2
     image = cv2.resize(frame, (224, 224))
+    
+    # Convert BGR to RGB
+    image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
+
+    # Convert to numpy array
+    image = np.array(image)
 
