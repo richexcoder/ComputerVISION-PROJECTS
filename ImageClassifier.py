@@ -46,3 +46,9 @@ while True:
 
     # Make our image prediction
     predictions = model.predict(image, verbose=0)
+
+    # Getting the  top prediction
+    decoded = tf.keras.applications.mobilenet_v2.decode_predictions(
+        predictions,
+        top=1
+    )[0][0]
