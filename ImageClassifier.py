@@ -38,5 +38,5 @@ while True:
     # Convert to numpy array
     image = np.array(image)
 
-    # Adding thr batch dimension
+    # Adding the batch dimension
     image = np.expand_dims(image, axis=0)
