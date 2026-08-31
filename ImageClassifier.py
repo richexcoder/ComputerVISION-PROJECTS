@@ -59,3 +59,10 @@ while True:
 
     # Creating the text
     text = f"{label}: {confidence:.1f}%"
+
+    # Show webcam
+    cv2.imshow("AI Image Classifier", frame)
+
+    # Press Q to quit
+    if cv2.waitKey(1) & 0xFF == ord("q"):
+        break
