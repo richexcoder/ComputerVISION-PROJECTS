@@ -56,3 +56,6 @@ while True:
     # Extracting our prediction information
     label = decoded[1]
     confidence = decoded[2] * 100
+
+    # Creating the text
+    text = f"{label}: {confidence:.1f}%"
