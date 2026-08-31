@@ -52,3 +52,7 @@ while True:
         predictions,
         top=1
     )[0][0]
+
+    # Extracting our prediction information
+    label = decoded[1]
+    confidence = decoded[2] * 100
