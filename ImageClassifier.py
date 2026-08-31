@@ -43,3 +43,6 @@ while True:
 
     # Preprocess our image
     image = tf.keras.applications.mobilenet_v2.preprocess_input(image)
+
+    # Make our image prediction
+    predictions = model.predict(image, verbose=0)
