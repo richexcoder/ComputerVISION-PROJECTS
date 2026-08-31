@@ -40,3 +40,6 @@ while True:
 
     # Adding the batch dimension
     image = np.expand_dims(image, axis=0)
+
+    # Preprocess our image
+    image = tf.keras.applications.mobilenet_v2.preprocess_input(image)
